@@ -4,27 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>David Chu's China Bistro</title>
+    <title>Assignment Solution for Module 3</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
-<body>
+<body id="#top">
   <header>
     <nav id="header-nav" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img"></div>
-          </a>
-
           <div class="navbar-brand">
-            <a href="index.html"><h1>David Chu's China Bistro</h1></a>
-            <p>
-              <img src="images/star-k-logo.png" alt="Kosher certification">
-              <span>Kosher Certified</span>
-            </p>
+            <h1>Food, LLC</h1>
           </div>
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
@@ -36,26 +26,15 @@
         </div>
         
         <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="visible-xs active">
-              <a href="index.html">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
+           <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs text-center">
+            <li>
+              <a href="#chicken-card" data-toggle="collapse" data-target="#collapsable-nav"><br class="hidden-xs"> Chicken </a>
             </li>
             <li>
-              <a href="menu-categories.html">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+              <a href="#beef-card" data-toggle="collapse" data-target="#collapsable-nav"><br class="hidden-xs"> Beef</a>
             </li>
             <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
-            </li>
-            <li id="phone" class="hidden-xs">
-              <a href="tel:410-602-5008">
-                <span>410-602-5008</span></a><div>* We Deliver</div>
+              <a href="#sushi-card" data-toggle="collapse" data-target="#collapsable-nav"><br class="hidden-xs"> Sushi</a>
             </li>
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
@@ -63,62 +42,56 @@
     </nav><!-- #header-nav -->
   </header>
 
-  <div id="call-btn" class="visible-xs">
-    <a class="btn" href="tel:410-602-5008">
-    <span class="glyphicon glyphicon-earphone"></span>
-    410-602-5008
-    </a>
-  </div>
-  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
-
-  <div id="main-content" class="container">
-    <div class="jumbotron">
-      <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
-    </div>
-
-    <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="menu-categories.html"><div id="menu-tile"><span>menu</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="single-category.html"><div id="specials-tile"><span>specials</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <a href="https://www.google.com/maps/place/David+Chu's+China+Bistro/@39.3635874,-76.7138622,17z/data=!4m6!1m3!3m2!1s0x89c81a14e7817803:0xab20a0e99daa17ea!2sDavid+Chu's+China+Bistro!3m1!1s0x89c81a14e7817803:0xab20a0e99daa17ea" target="_blank">
-          <div id="map-tile">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.675372390488!2d-76.71386218529199!3d39.3635874269356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid+Chu&#39;s+China+Bistro!5e0!3m2!1sen!2sus!4v1452824864156" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <span>map</span>
+  <div class="container">
+    
+    <h1 class="text-center">Our Menu</h1>
+  
+    <div class="row">
+      <div id="chicken-card" class="col-xs-12">
+        <div class="card">
+          <div class="tab chicken"><h3>Chicken</h3></div>
+          <div class="description">
+            &nbsp;&nbsp;&nbsp;&nbsp;Apud Helvetios longe nobilissimus fuit et ditissimus Orgetorix. Is M. Messala, [et P.] M. Pisone consulibus regni cupiditate inductus coniurationem nobilitatis fecit et civitati persuasit ut de finibus suis cum omnibus copiis exirent: perfacile esse, cum virtute omnibus praestarent, totius Galliae imperio potiri. Id hoc facilius iis persuasit, quod undique loci natura Helvetii continentur: una ex parte flumine Rheno latissimo atque altissimo, qui agrum Helvetium a Germanis dividit; altera ex parte monte Iura altissimo, qui est inter Sequanos et Helvetios; tertia lacu Lemanno et flumine Rhodano, qui provinciam nostram ab Helvetiis dividit. His rebus fiebat ut et minus late vagarentur et minus facile finitimis bellum inferre possent; qua ex parte homines bellandi cupidi magno dolore adficiebantur. Pro multitudine autem hominum et pro gloria belli atque fortitudinis angustos se fines habere arbitrabantur, qui in longitudinem milia passuum CCXL, in latitudinem CLXXX patebant.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;His rebus adducti et auctoritate Orgetorigis permoti constituerunt ea quae ad proficiscendum pertinerent comparare, iumentorum et carrorum quam maximum numerum coemere, sementes quam maximas facere, ut in itinere copia frumenti suppeteret, cum proximis civitatibus pacem et amicitiam confirmare. Ad eas res conficiendas biennium sibi satis esse duxerunt; in tertium annum profectionem lege confirmant. Ad eas res conficiendas Orgetorix deligitur. Is sibi legationem ad civitates suscipit. In eo itinere persuadet Castico, Catamantaloedis filio, Sequano, cuius pater regnum in Sequanis multos annos obtinuerat et a senatu populi Romani amicus appellatus erat, ut regnum in civitate sua occuparet, quod pater ante habuerit; itemque Dumnorigi Haeduo, fratri Diviciaci, qui eo tempore principatum in civitate obtinebat ac maxime plebi acceptus erat, ut idem conaretur persuadet eique filiam suam in matrimonium dat. Perfacile factu esse illis probat conata perficere, propterea quod ipse suae civitatis imperium obtenturus esset: non esse dubium quin totius Galliae plurimum Helvetii possent; se suis copiis suoque exercitu illis regna conciliaturum confirmat. Hac oratione adducti inter se fidem et ius iurandum dant et regno occupato per tres potentissimos ac firmissimos populos totius Galliae sese potiri posse sperant.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Ea res est Helvetiis per indicium enuntiata. Moribus suis Orgetoricem ex vinculis causam dicere coegerunt; damnatum poenam sequi oportebat, ut igni cremaretur. Die constituta causae dictionis Orgetorix ad iudicium omnem suam familiam, ad hominum milia decem, undique coegit, et omnes clientes obaeratosque suos, quorum magnum numerum habebat, eodem conduxit; per eos ne causam diceret se eripuit. Cum civitas ob eam rem incitata armis ius suum exequi conaretur multitudinemque hominum ex agris magistratus cogerent, Orgetorix mortuus est; neque abest suspicio, ut Helvetii arbitrantur, quin ipse sibi mortem consciverit.
           </div>
-        </a>
+          <a href="#top"><div><span>top</span></div></a>
+        </div>
       </div>
-    </div><!-- End of #home-tiles -->
-  </div><!-- End of #main-content -->
-
-  <footer class="panel-footer">
-    <div class="container">
-      <div class="row">
-        <section id="hours" class="col-sm-4">
-          <span>Hours:</span><br>
-          Sun-Thurs: 11:15am - 10:00pm<br>
-          Fri: 11:15am - 2:30pm<br>
-          Saturday Closed
-          <hr class="visible-xs">
-        </section>
-        <section id="address" class="col-sm-4">
-          <span>Address:</span><br>
-          7105 Reisterstown Road<br>
-          Baltimore, MD 21215
-          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
-          <hr class="visible-xs">
-        </section>
-        <section id="testimonials" class="col-sm-4">
-          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
-          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
-        </section>
+  
+      <div id="beef-card" class="col-xs-12">
+        <div class="card">
+          <div class="tab beef"><h3>Beef</h3></div>
+          <div class="description">
+            &nbsp;&nbsp;&nbsp;&nbsp;Caesari renuntiatur Helvetiis esse in animo per agrum Sequanorum et Haeduorum iter in Santonum fines facere, qui non longe a Tolosatium finibus absunt, quae civitas est in provincia. Id si fieret, intellegebat magno cum periculo provinciae futurum ut homines bellicosos, populi Romani inimicos, locis patentibus maximeque frumentariis finitimos haberet. Ob eas causas ei munitioni quam fecerat T. Labienum legatum praeficit; ipse in Italiam magnis itineribus contendit duasque ibi legiones conscribit et tres, quae circum Aquileiam hiemabant, ex hibernis educit et, qua proximum iter in ulteriorem Galliam per Alpes erat, cum his quinque legionibus ire contendit. Ibi Ceutrones et Graioceli et Caturiges locis superioribus occupatis itinere exercitum prohibere conantur. Compluribus his proeliis pulsis ab Ocelo, quod est [oppidum] citerioris provinciae extremum, in fines Vocontiorum ulterioris provinciae die septimo pervenit; inde in Allobrogum fines, ab Allobrogibus in Segusiavos exercitum ducit. Hi sunt extra provinciam trans Rhodanum primi.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Helvetii iam per angustias et fines Sequanorum suas copias traduxerant et in Haeduorum fines pervenerant eorumque agros populabantur. Haedui, cum se suaque ab iis defendere non possent, legatos ad Caesarem mittunt rogatum auxilium: ita se omni tempore de populo Romano meritos esse ut paene in conspectu exercitus nostri agri vastari, liberi [eorum] in servitutem abduci, oppida expugnari non debuerint. Eodem tempore [quo] Haedui Ambarri, necessarii et consanguinei Haeduorum, Caesarem certiorem faciunt sese depopulatis agris non facile ab oppidis vim hostium prohibere. Item Allobroges, qui trans Rhodanum vicos possessionesque habebant, fuga se ad Caesarem recipiunt et demonstrant sibi praeter agri solum nihil esse reliqui. Quibus rebus adductus Caesar non expectandum sibi statuit dum, omnibus, fortunis sociorum consumptis, in Santonos Helvetii pervenirent.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Flumen est Arar, quod per fines Haeduorum et Sequanorum in Rhodanum influit, incredibili lenitate, ita ut oculis in utram partem fluat iudicari non possit. Id Helvetii ratibus ac lintribus iunctis transibant. Ubi per exploratores Caesar certior factus est tres iam partes copiarum Helvetios id flumen traduxisse, quartam vero partem citra flumen Ararim reliquam esse, de tertia vigilia cum legionibus tribus e castris profectus ad eam partem pervenit quae nondum flumen transierat. Eos impeditos et inopinantes adgressus magnam partem eorum concidit; reliqui sese fugae mandarunt atque in proximas silvas abdiderunt. Is pagus appellabatur Tigurinus; nam omnis civitas Helvetia in quattuor pagos divisa est. Hic pagus unus, cum domo exisset, patrum nostrorum memoria L. Cassium consulem interfecerat et eius exercitum sub iugum miserat. Ita sive casu sive consilio deorum immortalium quae pars civitatis Helvetiae insignem calamitatem populo Romano intulerat, ea princeps poenam persolvit. Qua in re Caesar non solum publicas, sed etiam privatas iniurias ultus est, quod eius soceri L. Pisonis avum, L. Pisonem legatum, Tigurini eodem proelio quo Cassium interfecerant.
+          </div>
+          <a href="#top"><div><span>top</span></div></a>
+        </div>
       </div>
-      <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
+  
+      <div id="sushi-card" class="col-xs-12">
+        <div class="card">
+          <div class="tab sushi"><h3>Sushi</h3></div>
+          <div class="description">
+            &nbsp;&nbsp;&nbsp;&nbsp;Quod ubi Caesar resciit, quorum per fines ierant his uti conquirerent et reducerent, si sibi purgati esse vellent, imperavit; reductos in hostium numero habuit; reliquos omnes obsidibus, armis, perfugis traditis in deditionem accepit. Helvetios, Tulingos, Latobrigos in fines suos, unde erant profecti, reverti iussit, et, quod omnibus frugibus amissis domi nihil erat quo famem tolerarent, Allobrogibus imperavit ut iis frumenti copiam facerent; ipsos oppida vicosque, quos incenderant, restituere iussit. Id ea maxime ratione fecit, quod noluit eum locum unde Helvetii discesserant vacare, ne propter bonitatem agrorum Germani, qui trans Rhenum incolunt, [ex] suis finibus in Helvetiorum fines transirent et finitimi Galliae provinciae Allobrogibusque essent. Boios petentibus Haeduis, quod egregia virtute erant cogniti, ut in finibus suis conlocarent, concessit; quibus illi agros dederunt quosque postea in parem iuris libertatisque condicionem atque ipsi erant receperunt.
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;In castris Hevetiorum tabulae repertae sunt litteris Graecis confectae et ad Caesarem relatae, quibus in tabulis nominatim ratio confecta erat, qui numerus domo exisset eorum qui arma ferre possent, et item separatim, [quot] pueri, senes mulieresque. [Quarum omnium rerum] summa erat capitum Helvetiorum milium CCLXIII, Tulingorum milium XXXVI, Latobrigorum XIIII, Rauracorum XXIII, Boiorum XXXII; ex his qui arma ferre possent ad milia nonaginta duo. Summa omnium fuerunt ad milia CCCLXVIII. Eorum qui domum redierunt censu habito, ut Caesar imperaverat, repertus est numerus milium C et X
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Bello Helvetiorum confecto totius fere Galliae legati, principes civitatum, ad Caesarem gratulatum convenerunt: intellegere sese, tametsi pro veteribus Helvetiorum iniuriis populi Romani ab his poenas bello repetisset, tamen eam rem non minus ex usu [terrae] Galliae quam populi Romani accidisse, propterea quod eo consilio florentissimis rebus domos suas Helvetii reliquissent uti toti Galliae bellum inferrent imperioque potirentur, locumque domicilio ex magna copia deligerent quem ex omni Gallia oportunissimum ac fructuosissimum iudicassent, reliquasque civitates stipendiarias haberent. Petierunt uti sibi concilium totius Galliae in diem certam indicere idque Caesaris facere voluntate liceret:  sese habere quasdam res quas ex communi consensu ab eo petere vellent. Ea re permissa diem concilio constituerunt et iure iurando ne quis enuntiaret, nisi quibus communi consilio mandatum esset, inter se sanxerunt.
+          </div>
+          <a href="#top"><div><span>top</span></div></a>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+
+  
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
