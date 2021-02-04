@@ -4,6 +4,7 @@
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .green {
@@ -12,4 +13,14 @@
 
 .red {
     color: red;
+}
+
+.border-green {
+    border-color: green;
+    border-width: 2px;
+}
+
+.border-red {
+    border-color: red;
+    border-width: 2px;
 }

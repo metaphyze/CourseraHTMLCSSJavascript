@@ -10,11 +10,13 @@
         $scope.items = "";
         $scope.resultOfCheck = "";
         $scope.customStyle = {};
+        $scope.customInputStyle = {};
 
         $scope.checkItems = function () {
             if ($scope.items.length == 0) {
                 $scope.resultOfCheck = "Please enter data first";
                 $scope.customStyle.colorClass = "red";
+                $scope.customInputStyle.colorClass = "border-red";
                 return;
             }
             
@@ -32,12 +34,15 @@
                 // ALL the items entered were empty: ,,,,,,,,,,,
                 $scope.resultOfCheck = "Please enter data first";
                 $scope.customStyle.colorClass = "red";
+                $scope.customInputStyle.colorClass = "border-red";
             } else if (count > 3) {
                 $scope.resultOfCheck = "Too much!";
-                $scope.customStyle.colorClass = "red";
+                $scope.customStyle.colorClass = "green";
+                $scope.customInputStyle.colorClass = "border-green";
             } else {
                 $scope.resultOfCheck = "Enjoy!";
                 $scope.customStyle.colorClass = "green";
+                $scope.customInputStyle.colorClass = "border-green";
             }
             
         };
