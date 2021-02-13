@@ -18,7 +18,7 @@
                 quantity: 5
             },
             {
-                name : "applies",
+                name : "apples",
                 quantity: 100
             },
             {
