@@ -54,8 +54,6 @@
     function AlreadyBoughtController(ShoppingListCheckOffService) {
         var boughtList = this;
         boughtList.itemsBought = ShoppingListCheckOffService.itemsBought;
-
-
     }
 
 })();
