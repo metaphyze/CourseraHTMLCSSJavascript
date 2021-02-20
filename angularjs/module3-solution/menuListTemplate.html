@@ -1,0 +1,10 @@
+<ul>
+    <li ng-repeat="item in directiveCtrl.items">
+        <b>{{ item.name}} ({{item.short_name}})</b> <button ng-click="directiveCtrl.removeItem( { itemIndex: $index } );">Don't want this one!</button>
+        <br>
+        {{item.description}}
+        <br>
+        {{directiveCtrl.formatPrice(item)}}
+    </li>    
+</ul>
+
