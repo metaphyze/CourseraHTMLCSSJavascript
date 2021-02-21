@@ -35,6 +35,15 @@
                 return "Price Not Listed"
             }
         }
+        
+        directiveCtrl.showNoResultsMessage = function() {
+            if (directiveCtrl.items === undefined) {
+                // No search has been performed yet.
+                return false
+            }
+            
+            return directiveCtrl.items != null && directiveCtrl.items.length == 0;
+        }
     }
     
     MenuSearchService.$inject = ['$http']
@@ -83,7 +92,7 @@
     function NarrowItDownController(MenuSearchService) {
         var controller = this;
         controller.searchTerm = "";
-        controller.found = [];
+        controller.found = undefined; // Undefined until a search has been performed
         
         controller.removeMenuItem = function(index) {
             if (index >= 0 && index < controller.found.length ) {
@@ -93,6 +102,10 @@
         
         controller.filterItems = function() {
             var term = controller.searchTerm.trim().toLowerCase();
+            if (term == "") {
+                controller.found = [];
+                return;
+            }
             var asyncServerCall = MenuSearchService.getMatchedMenuItems(term);
             
             asyncServerCall.then(function success(filteredItems) {
