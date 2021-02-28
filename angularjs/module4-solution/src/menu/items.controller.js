@@ -6,10 +6,10 @@
 
 
     ItemsController.$inject = ['categoryItems'];
-    function ItemsController(items) {
-        console.log("ITEMS in controller",items);
+    function ItemsController(categoryItems) {
+        console.log("ITEMS in controller",categoryItems);
         var itemsList = this;
-        itemsList.categoryItems = items;
+        itemsList.categoryItems = categoryItems;
     }
 
 })();

@@ -30,7 +30,7 @@
                 }
             })
 
-           .state('categoriesList.items', {
+           .state('categoriesListItems', {
                 url: '/items/{categoryId}',
                 templateUrl: 'src/menu/templates/category-itemslist.template.html',
                 controller: "ItemsController as itemsList",
