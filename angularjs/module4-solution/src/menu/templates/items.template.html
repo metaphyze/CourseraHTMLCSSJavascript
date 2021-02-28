@@ -10,9 +10,12 @@
         <!--         "small_portion_name":"pint",-->
         <!--         "large_portion_name":"quart"-->
         <b>{{ item.name}} ({{item.short_name}})</b> 
+        <br ng-if="item.description.length>0" >
+        {{ item.description }}
         <br>
-        {{item.description}}
-        <br>
-        <!--{{directiveCtrl.formatPrice(item)}}-->
+        {{  (item.price_small > 0 && item.price_large > 0) ?"Price: $" + item.price_small + " (small), $" + item.price_large+" (large)" :
+            (item.price_small > 0) ? "Price: $" + item.price_small :
+            (item.price_large > 0) ? "Price: $" + item.price_large : "Price Not Listed"
+        }}
     </li>
 </ul>
