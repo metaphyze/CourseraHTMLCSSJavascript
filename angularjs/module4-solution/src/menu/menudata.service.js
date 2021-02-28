@@ -61,10 +61,9 @@
                 // }
                 
                 
-                // var items = response.data.menu_items;
-                // console.log("ITEMS",items);
-                //
-                // return items;
+                // I'm returning the WHOLE object, not just the menu_items
+                // so that I can get the category name to display on the page
+                // along with the items
                 return response.data;
             });
 
