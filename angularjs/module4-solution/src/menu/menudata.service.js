@@ -61,10 +61,11 @@
                 // }
                 
                 
-                var items = response.data.menu_items;
-                console.log("ITEMS",items);
-
-                return items;
+                // var items = response.data.menu_items;
+                // console.log("ITEMS",items);
+                //
+                // return items;
+                return response.data;
             });
 
             return serverCall;

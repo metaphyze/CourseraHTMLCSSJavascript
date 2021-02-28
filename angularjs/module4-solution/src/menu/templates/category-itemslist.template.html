@@ -1,6 +1,6 @@
-<a ui-sref="home">Home</a> &lt; <span>List</span>
+<a ui-sref="home">Home</a> &lt; <a ui-sref="categoriesList">All Categories</a>
 
-<h3>Category Items</h3>
-<items category-items="itemsList.categoryItems"></items>
+<h3>{{itemsList.categoryItems.category.name}} Items</h3>
+<items category-items="itemsList.categoryItems.menu_items"></items>
 
 <ui-view></ui-view>
