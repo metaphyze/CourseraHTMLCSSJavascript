@@ -21,7 +21,7 @@
 
             .state('categoriesList', {
                 url: '/categories-list',
-                templateUrl: 'src/menu/templates/categories.template.html',
+                templateUrl: 'src/menu/templates/main-categorieslist.template.html',
                 controller: 'CategoriesController as categoriesList',
                 resolve: {
                     items: ['MenuDataService', function (MenuDataService) {
