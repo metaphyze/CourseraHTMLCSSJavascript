@@ -61,12 +61,12 @@
                disallow-spaces
                placeholder="Favorite Dish #"
                style="text-transform:uppercase" >
-        <div  class="error"
+        <div   class="error"
                ng-if="signUpForm.favoriteMenuItem.$invalid && signUpForm.favoriteMenuItem.$touched">
                Must be at least 2-4 characters</div>
-        <div  class="error"
+        <div   class="error"
                ng-if="ctrl.itemIsInvalid">
-               Item not found</div>
+               No such menu number exists</div>
         <br>
 
 
@@ -74,7 +74,7 @@
                 ng-disabled="signUpForm.$invalid">Sign Up</button><br>
 
         <div ng-if="ctrl.submissionState == 1">Submitting...</div>
-        <div class="success" ng-if="ctrl.submissionState == 2">Your information has been saved</div>
+        <div class="success" ng-if="ctrl.submissionState == 2">Your information has been saved.</div>
         <div class="error" ng-if="ctrl.submissionState == 3">Error submitting</div>
         
         
