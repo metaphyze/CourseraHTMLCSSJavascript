@@ -18,6 +18,10 @@
           ctrl.itemIsInvalid = false; 
           ctrl.submissionState = NON_SUBMITTED;
         };
+        
+        ctrl.getCurrentInfo = function() {
+            return IdService.getId();
+        };
 
         ctrl.signUp = function () {
             ctrl.itemIsInvalid = false;

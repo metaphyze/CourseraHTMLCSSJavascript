@@ -1,1 +1,21 @@
-<h1>My Info</h1>
+<div class="center" ng-controller="SignUpController as ctrl">
+    <div ng-if="ctrl.getCurrentInfo().emailAddr == ''">
+        Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
+    <div ng-if="ctrl.getCurrentInfo().emailAddr != ''">
+        <h1>Registered Info</h1>
+        <b>First Name:</b> {{ctrl.getCurrentInfo().firstname}} 
+        <br>
+        <b>Last Name:</b> {{ctrl.getCurrentInfo().lastname}}
+        <br>
+        <b>Email:</b> {{ctrl.getCurrentInfo().emailAddr}}
+        <br>
+        <b>Phone:</b> {{ctrl.getCurrentInfo().phoneNumber}}
+        <br>
+        <br>
+        <b>Favorite Dish</b>
+        <div class="container">
+           <menu-item menu-item="ctrl.getCurrentInfo().favItem"></menu-item>
+        </div>
+    </div>
+</div>

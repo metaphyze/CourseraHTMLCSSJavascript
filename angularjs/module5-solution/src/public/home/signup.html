@@ -1,4 +1,4 @@
-<fieldset ng-controller="SignUpController as ctrl">
+<div class="center" ng-controller="SignUpController as ctrl">
     <h2>News Letter Signup</h2>
     <form name='signUpForm' novalidate>
     
@@ -8,9 +8,9 @@
                ng-change="ctrl.resetItemValidity()"
                required 
                placeholder="First Name">
-        <span class="error"
+        <div class="error"
               ng-if="signUpForm.fname.$error.required && signUpForm.fname.$touched">
-                First Name is required</span>
+                First Name is required</div>
         <br>
 
 
@@ -20,9 +20,9 @@
                ng-change="ctrl.resetItemValidity()"
                required 
                placeholder="Last Name">
-        <span class="error"
+        <div class="error"
               ng-if="signUpForm.lname.$error.required && signUpForm.lname.$touched">
-                Last Name is required</span>
+                Last Name is required</div>
         <br>
 
 
@@ -32,9 +32,9 @@
                ng-change="ctrl.resetItemValidity()"
                required ng-min-length="4" 
                placeholder="Email">
-        <span class="error"
+        <div class="error"
               ng-if="signUpForm.emailAddr.$invalid && signUpForm.emailAddr.$touched">
-                Must be a valid email address:  handle@domain format</span>
+                Must be a valid email address:  handle@domain format</div>
         <br>
 
 
@@ -45,9 +45,9 @@
                required ng-min-length="7" 
                placeholder="Phone ###-###-####"
                pattern="(\d{3})-(\d{3})-(\d{4})">
-        <span class="error"
+        <div class="error"
               ng-if="signUpForm.phoneNumber.$invalid && signUpForm.phoneNumber.$touched">
-                Phone number must be in the format ###-###-####</span>
+                Phone number must be in the format ###-###-####</div>
         <br>
         
         <input type="text" 
@@ -61,22 +61,22 @@
                disallow-spaces
                placeholder="Favorite Dish #"
                style="text-transform:uppercase" >
-        <span  class="error"
+        <div  class="error"
                ng-if="signUpForm.favoriteMenuItem.$invalid && signUpForm.favoriteMenuItem.$touched">
-               Must be at least 2-4 characters</span>
-        <span  class="error"
+               Must be at least 2-4 characters</div>
+        <div  class="error"
                ng-if="ctrl.itemIsInvalid">
-               Item not found</span>
+               Item not found</div>
         <br>
 
 
         <button ng-click="ctrl.signUp()" 
                 ng-disabled="signUpForm.$invalid">Sign Up</button><br>
 
-        <span ng-if="ctrl.submissionState == 1">Submitting...</span>
-        <span class="success" ng-if="ctrl.submissionState == 2">Your information has been saved</span>
-        <span class="error" ng-if="ctrl.submissionState == 3">Error submitting</span>
+        <div ng-if="ctrl.submissionState == 1">Submitting...</div>
+        <div class="success" ng-if="ctrl.submissionState == 2">Your information has been saved</div>
+        <div class="error" ng-if="ctrl.submissionState == 3">Error submitting</div>
         
         
     </form>
-</fieldset>
+</div>

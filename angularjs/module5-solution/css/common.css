@@ -69,3 +69,11 @@ fieldset {
 .success {
     color: lawngreen;
 }
+
+.center {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+}
