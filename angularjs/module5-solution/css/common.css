@@ -33,11 +33,11 @@ button {
 }
 
 .ng-touched.ng-valid {
-    border: 2px green solid;
+    border: 3px lawngreen solid;
 }
 
 .ng-touched.ng-invalid {
-    border: 4px red solid;
+    border: 3px red solid;
 }
 
 #info {
@@ -64,4 +64,8 @@ fieldset {
 
 .error {
     color: red;
+}
+
+.success {
+    color: lawngreen;
 }

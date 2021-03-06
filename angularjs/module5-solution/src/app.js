@@ -4,27 +4,46 @@
         .service("IdService",IdService) 
         .controller('SignUpController', SignUpController);
 
-    SignUpController.$inject = ['IdService']
+    SignUpController.$inject = ['IdService','$http','ApiPath']
     
-    function SignUpController(IdService) {
+    function SignUpController(IdService,$http,ApiPath) {
         var ctrl = this;
-        var id = IdService.getId()
-        ctrl.firstname = id.firstname;
-        ctrl.lastname = id.lastname;
-        ctrl.emailAddr = id.emailAddr;
-        ctrl.phoneNumber = id.phoneNumber;
-        ctrl.favoriteMenuItem = id.favoriteMenuItem;
+        var NON_SUBMITTED = 0;
+        var SUBMITTING = 1;
+        var SUBMISSION_SUCCESS = 2;
+        var SUBMISSION_FAILURE = 3;
+        
+        
+        ctrl.resetItemValidity = function() {
+          ctrl.itemIsInvalid = false; 
+          ctrl.submissionState = NON_SUBMITTED;
+        };
 
         ctrl.signUp = function () {
-            console.log("submitting");
-            IdService.setId(
+            ctrl.itemIsInvalid = false;
+            ctrl.submissionState = SUBMITTING; 
+            
+            $http.get(ApiPath + "/menu_items/" + ctrl.favoriteMenuItem.toUpperCase() + ".json").then(function (response)
                 {
-                    firstname : ctrl.firstname,
-                    lastname : ctrl.lastname,
-                    emailAddr : ctrl.emailAddr,
-                    phoneNumber : ctrl.phoneNumber,
-                    favoriteMenuItem : ctrl.favoriteMenuItem
+                    console.log("DATA:",response.data);
+                    ctrl.submissionState = SUBMISSION_SUCCESS;
+                    
+                    IdService.setId(
+                        {
+                            firstname : ctrl.firstname,
+                            lastname : ctrl.lastname,
+                            emailAddr : ctrl.emailAddr,
+                            phoneNumber : ctrl.phoneNumber,
+                            favItem: response.data
+                        });    
+                }).catch(function(errorResponse)
+                {
+                    console.log("ERROR:",errorResponse);
+                    ctrl.itemIsInvalid = true;
+                    ctrl.submissionState = SUBMISSION_FAILURE;
                 });
+            
+            
         };
     };
     
@@ -35,7 +54,7 @@
              lastname : "",
              emailAddr : "",
              phoneNumber : "",
-             favoriteMenuItem : ""
+             favItem: {}
          };
          
          idService.setId = function(newId) {
