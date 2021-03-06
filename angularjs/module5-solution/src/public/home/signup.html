@@ -1,1 +1,23 @@
-<h1>Sign Up</h1>
+<fieldset ng-controller="SignUpController as ctrl">
+    <h2>News Letter Signup</h2>
+    <form name='signUpForm' novalidate>
+    
+        <input type="text" name="fname" ng-model="ctrl.firstname" required placeholder="First Name">
+        <br>
+        <input type="text" name="lname" ng-model="ctrl.lastname" required placeholder="Last Name">
+        <br>
+        <input type="text" name="emailAddr" ng-model="ctrl.emailAddr" required ng-min-length="4" placeholder="Email">
+        <br>
+        <input type="text" name="phoneNumber" ng-model="ctrl.phoneNumber" required ng-min-length="7" placeholder="Phone Number">
+        <br>
+        <input type="text" name="favoriteMenuItem" ng-model="ctrl.favoriteMenuItem" placeholder="Favorite Dish (code)">
+        <br>
+        <button ng-click="ctrl.signUp()" ng-disabled="signUpForm.$invalid">Sign Up</button>
+        
+        <br>
+        <span class="error"
+            ng-if="signUpForm.fname.$error.required && signUpForm.fname.$touched">
+            First Name is required
+        </span>
+    </form>
+</fieldset>

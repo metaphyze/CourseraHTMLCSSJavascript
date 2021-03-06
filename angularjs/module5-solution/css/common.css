@@ -18,3 +18,50 @@
 .ui-view-placeholder {
     margin-top: 60px;
 }
+
+
+input {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color : black;
+}
+
+button {
+    font-size: 24px;
+    color: black;
+    background-color: gold;
+}
+
+.ng-touched.ng-valid {
+    border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+    border: 4px red solid;
+}
+
+#info {
+    margin-top: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgray;
+}
+
+fieldset {
+    margin:auto;
+    width: 50%;
+}
+
+.error {
+    color: red;
+}
